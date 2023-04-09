@@ -1,0 +1,44 @@
+@import '../../scss/variables.scss';
+
+.noteCard {
+  background-color: $color-white;
+  color: $color-primary;
+  position: relative;
+  padding: 10px 15px 20px;
+  border-radius: 20px;
+  transition: all 0.2s linear;
+  box-shadow: 0px 32px 64px #2C273814;
+  cursor: pointer;
+  list-style: none;
+
+  .time {
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .note {
+    margin: 5px 0 0 5px;
+    font-size: 12px;
+  }
+
+  .desktopDeleteButton {
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+
+    @media #{$large} {
+      .desktopDeleteButton {
+        display: grid;
+      }
+    }
+  }
+
+  @media #{$small, $medium} {
+    &.longPressed {
+      animation: bump 0.2s ease-in-out;
+      overflow: hidden;
+    }
+  }
+}
