@@ -1,0 +1,106 @@
+{
+  "name": "mood-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.13",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "date-fns": "^2.21.3",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-clamp-lines": "^3.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-scripts": "4.0.3",
+    "react-toggle": "^4.1.2",
+    "typescript": "^4.2.4",
+    "use-breakpoint": "^2.0.1",
+    "use-long-press": "^1.1.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.1.2",
+    "workbox-background-sync": "^6.3.0",
+    "workbox-broadcast-update": "^6.3.0",
+    "workbox-cacheable-response": "^6.3.0",
+    "workbox-core": "^6.3.0",
+    "workbox-expiration": "^6.3.0",
+    "workbox-google-analytics": "^6.3.0",
+    "workbox-navigation-preload": "^6.3.0",
+    "workbox-precaching": "^6.3.0",
+    "workbox-range-requests": "^6.3.0",
+    "workbox-routing": "^6.3.0",
+    "workbox-strategies": "^6.3.0",
+    "workbox-streams": "^6.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=5951ac0d2422"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/**/*.stories.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "lcov"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "@types/react-toggle": "^4.0.2",
+    "@types/uuid": "^8.3.0",
+    "chromatic": "^5.9.2"
+  }
+}
