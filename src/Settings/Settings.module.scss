@@ -1,0 +1,49 @@
+@import '../../scss/variables.scss';
+
+.settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 20px 10px;
+
+  button {
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    transition: all 0.2s linear;
+    background-color: transparent;
+
+    .icon {
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &:not(.sundayButton)  {
+      grid-column: 1 / 3;
+
+      &:hover, &:focus-visible {
+        background-color: $color-tint;
+      }
+    }
+
+    &.sundayButton {
+      cursor: auto;
+      grid-column: 1;
+    }
+    
+  }
+
+  .toggleContainer {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  @media #{$small} {
+    grid-template-columns: 1fr auto;
+  }
+}
